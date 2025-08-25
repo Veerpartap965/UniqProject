@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            --main-color:red;
+           --custom-width: 300px;
+        --custom-height: 800px;
+        }
+
+        .flex_container{
+             /* width: 800px; */
+             width: 100vw;
+            height: 100vh;
+            text-align: center;
+            display: flex;
+            /* flex-direction: column; */
+            /* flex-wrap:nowrap; */
+            flex-wrap: wrap;
+             /* align-content:flex-start; */
+             font-weight: bolder;
+             font-size: 45px;
+             gap: 45px;
+             justify-content: center;
+             align-content: center;
+           
+        }
+
+        /* text-shadow → only works on text   ----syntax  we can say text-shadow: x-asix  y-axis  blur-spread color
+
+box-shadow → works on any element (div, button, card, etc.)box-shadow: offset-x offset-y blur-radius spread-radius color inset?;
+offset-x = movement along the X-axis (horizontal direction)
+offset-y = movement along the Y-axis (vertical direction).
+inset means blur inside the box ,card dicetc.
+*/
+       .item1{
+        background-color: blanchedalmond;
+        /* width: 350px;
+        height: 350px; */
+        width: var(--custom-height);
+             width: var(--custom-width);
+        display: flex;
+          justify-content: center;
+             align-items: center; 
+                /* flex-grow: 2; */
+                /* text-shadow: 3px 3px 5px red; */
+                /* multiple text-shadow */
+                    text-shadow: 3px 3px 5px --main-color, -4px -5px 4px blue;
+       }
+       .item2{
+        background-color:cadetblue;
+        /* width: 350px;
+        height: 350px; */
+             width: var(--custom-height);
+             width: var(--custom-width);
+              display: flex;
+          justify-content: center;
+             align-items: center;
+             /* flex-shrink: 2; */
+             /* box-shadow:  4px 4px 6px 3px  black; */
+
+            /* multiple box-shadow */
+               box-shadow:  4px 4px 6px 3px  black,-4px -5px 3px 2px red ;
+       }
+       .item3{
+        background-color: palegreen;
+        /* width: 350px;
+        height: 350px; */
+             width: var(--custom-height);
+             width: var(--custom-width);
+              display: flex;
+          justify-content: center;
+             align-items: center;
+              box-shadow: inset 5px 5px 10px rgba(179, 29, 29, 0.3);
+       }
+       .item4{
+        background-color:blueviolet;
+        /* width: 350px;
+        height: 350px; */
+             width: var(--custom-height);
+             width: var(--custom-width);
+              display: flex;
+          justify-content: center;
+             align-items: center;
+             /* order: -1; */
+       }
+       /* @media screen and (min-width:650px) {
+         .flex_container{
+        background-color:brown;
+         }
+       } */
+    </style>
+</head>
+<body>
+         <div class="flex_container">
+            <div class="item1">A</div>
+            <div class="item2">B</div>
+            <div class="item3">C</div>
+            <div class="item4">D</div>
+         </div>                                                                                                        
+</body>
+</html>
