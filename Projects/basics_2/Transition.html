@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TRANSITION</title>
+    <style>
+        .transition_par{
+            /* background-color: burlywood; */
+        } 
+        .item1{
+            width: 800px;
+            height: 500px;
+           background-color: antiquewhite;
+            margin-bottom: 100px;
+            /* transition: width 2s; */
+            /* syntax
+            🔹 Meaning:
+
+                    all → apply transition to all properties that change.
+
+                    5s → duration → it will take 5 seconds to complete the transition.
+
+                    ease → timing function → starts slow, speeds up, then slows down at the end.
+
+                    1s → delay → transition will wait 1 second before starting. */
+
+
+            transition: all 5s ease 1s;     
+           }
+        .item1:hover{
+            width: 1000px;
+          
+         background-color:chocolate;
+        }
+         .item2{
+               width: 800px;
+            height: 500px;
+           background-color:aquamarine;
+        transition: all 5s ease 2s; 
+        }
+         .item2:hover{
+            width: 1300px;
+            height: 1000px;
+           background-color:darksalmon;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="transition_par">
+        <div class="item1">A</div>
+        <div class="item2">B</div>
+    </div>
+    
+  /* position: relative; */
+            /* animation: change 5s linear  1s 4 alternate none  running ; */
+        
+        /* @keyframes change {
+            0% {
+                top:10px ;
+                left:0;
+            }
+             50% {
+                top:50px;
+                left:455px;
+            }
+             100% {
+                top:150px;
+                left:1300px;
+            }
+        } */
+</body>
+</html>
+
+
+
+
